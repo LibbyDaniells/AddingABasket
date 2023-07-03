@@ -1,3 +1,5 @@
+#Simulation Study under Method 1(a) where we have E=2 existing and N=2 new baskets
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
