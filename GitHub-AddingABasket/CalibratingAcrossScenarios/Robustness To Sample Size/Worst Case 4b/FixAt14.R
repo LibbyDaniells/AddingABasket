@@ -1,3 +1,6 @@
+#Simulation Study where the cut-off values are calibrated based on the interim sample size of 14, with this cut-off value applied to sample sizes 50-200% of 14 (i.e. 7-28). The sample size which gave the most inflation 
+#over this n5=14 value was then selected and calibrated for, simulation study repeated with this cut-off value. 
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
