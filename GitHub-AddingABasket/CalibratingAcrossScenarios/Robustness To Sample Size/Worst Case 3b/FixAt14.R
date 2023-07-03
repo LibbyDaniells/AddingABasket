@@ -1,3 +1,6 @@
+#Simulation Study where the cut-off values are calibrated based on the interim sample size of 14, with this cut-off value applied to sample sizes 50-200% of 14 (i.e. 7-28). The sample size which gave the most inflation 
+#over this n5=14 value was then selected and calibrated for, simulation study repeated with this cut-off value. 
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -75,7 +78,7 @@ run <- 5000
 
 
 load('WorstCaseDelta1_5.RData')
-cut.off <- cut_off[9,]
+cut.off <- cut_off[9,] #Cut-off value for n5=9 as this gave the most inflation over n5=14
 
 p1 <- rep(q0,K)
 p2 <- c(0.4,0.2,0.2,0.2,0.2)
