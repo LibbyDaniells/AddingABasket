@@ -1,3 +1,5 @@
+#Calibrate Method 1 for each sample size from n5=1 up to 24 (the size of existing basket).
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -91,7 +93,7 @@ Method1Cal <- mclapply(n_list,Method1Calibration,p,K1,K2,q0,run,pw,mc.cores=25)
 save(Method1Cal,file='WorstCaseMethod1Calibration.RData')
 
 
-load('WorstCaseMethod1Calibration.RData')
+load('WorstCaseMethod1Calibration.RData') #Find Delta Values for each sample size
 cut_off <- matrix(NA,nrow=24,ncol=5)
 for(i in 1:24){
   cut_off[i,1:4] <- 0.903
