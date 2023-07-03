@@ -1,3 +1,5 @@
+#Calibration and simulation study under fixed data scenarios for Method 1 where cut-off values, Delta, are calibrated under a global null scenario to achieve 10% type I error rate. 
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -26,7 +28,7 @@ Independent <- function(No.Baskets,q0,n,y){
   return(pmat)
 }
 
-
+#Calibrate under the global null to achieve a 10% type I error rate (traditional approach)
 
 Method1aCalibration <- function(K1,K2,p,n,q0,run,pw){
   K <- K1+K2
