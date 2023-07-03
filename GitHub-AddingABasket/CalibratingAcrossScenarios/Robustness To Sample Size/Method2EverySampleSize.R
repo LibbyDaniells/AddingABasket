@@ -1,3 +1,5 @@
+#Simulation study for fixed scenarios for every sample size of the new basket n5=1 up to 24 (the size of the existing baskets). Type I error rate and power are found for each sample size.
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -71,7 +73,7 @@ pw <- 0.3
 run <- 5000
 
 
-cut.off <- 0.9056
+cut.off <- 0.9056 #As the calibration doesn't take into account new baskets, this cut-off value remains the same regardless of sample size in the new basket.
 
 p1 <- rep(q0,K)
 p2 <- c(0.4,0.2,0.2,0.2,0.2)
@@ -97,7 +99,7 @@ for(i in 1:10){
 save(TryEveryn5,file='TryEveryn5ValueMethod2.RData')
 
 
-
+#Plots
 load('TryEveryn5ValueMethod2.RData')
 
 Sc1 <- matrix(NA,ncol=5,nrow=24)
