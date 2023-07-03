@@ -1,3 +1,5 @@
+#Calibration and simulation study under fixed data scenarios for Method 4(a) where cut-off values, Delta, are calibrated under a global null scenario to achieve 10% type I error rate. 
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
