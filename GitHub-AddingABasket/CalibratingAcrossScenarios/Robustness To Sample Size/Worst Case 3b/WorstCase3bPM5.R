@@ -1,3 +1,5 @@
+#Simulation study where Delta values are calibrated under fixed sample sizes (n5=5,10,15,20,24) and applied to plus of minus 5 of the fixed value
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -74,7 +76,7 @@ pw <- 0.3
 run <- 5000
 
 
-load('WorstCaseDelta1_5.RData')
+load('WorstCaseDelta1_5.RData') #Cut-off values obtained from WorstCase3bCalibration.R
 
 p1 <- rep(q0,K)
 p2 <- c(0.4,0.2,0.2,0.2,0.2)
@@ -91,6 +93,7 @@ pmat <- rbind(p1,p2,p3,p4,p5,p6,p7,p8,p9,p10)
 
 cut_offpm5 <- rbind(cut_off[5,],cut_off[10,],cut_off[15,],cut_off[20,],cut_off[24])
 
+#Sample Size and Delta
 n_Delta_list5 <- list()
 for(i in 1:10){
   n_Delta_list5[[i]] <- c(24,24,24,24,i,cut_offpm5[1,])
@@ -111,6 +114,8 @@ n_Delta_list24 <- list()
 for(i in 19:24){
   n_Delta_list24[[i-18]] <- c(24,24,24,24,i,cut_offpm5[5,])
 }
+
+#Simulation
 
 # Fixed5 <- list()
 # for(i in 1:10){
