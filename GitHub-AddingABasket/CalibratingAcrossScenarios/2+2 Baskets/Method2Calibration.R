@@ -1,3 +1,5 @@
+#Calibration of cut-off values under Method 2 where Delta is calibrated across scenarios
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -51,13 +53,14 @@ Method2Calibration <- function(p,K,n,q0,run,pw){
 
 
 
-K <- 2
+K <- 2 #Doesn't consider the new baskets
 n <- c(24,24)
 q0 <- 0.2
 q1 <- 0.4
 run <- 5000
 pw <- 0.3
 
+#Only two scenarios to consider when K=2
 p1 <- c(q0,q0)
 p2 <- c(q1,q0)
 p <- rbind(p1,p2)
