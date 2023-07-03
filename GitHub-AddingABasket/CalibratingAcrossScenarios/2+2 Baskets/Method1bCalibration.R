@@ -1,3 +1,5 @@
+#Calibration of cut-off values under Method 1(b) where Delta is calibrated across scenarios
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -69,6 +71,7 @@ q1 <- 0.4
 run <- 5000
 pw <- 0.3
 
+#Scenarios considered to be calibrated over
 p1 <- c(q0,q0,q0,q0)
 p2 <- c(q1,q0,q0,q0)
 p3 <- c(q1,q1,q0,q0)
