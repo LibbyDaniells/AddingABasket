@@ -85,7 +85,7 @@ n <- c(rep(24,K1),rep(14,K2))
 pw <- 0.3
 run <- 5000
 
-load('Method1Delta.RData')
+load('Method1Delta.RData') #Load cut-off values obtained in Method1CalibrationEverySampleSize.R
 
 p1 <- rep(q0,K)
 p2 <- c(0.4,0.2,0.2,0.2,0.2)
