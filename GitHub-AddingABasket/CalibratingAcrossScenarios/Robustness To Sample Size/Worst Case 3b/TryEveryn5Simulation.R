@@ -1,3 +1,5 @@
+#Simulation in which, for each sample size, a calibration and simulation study is conducted
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
