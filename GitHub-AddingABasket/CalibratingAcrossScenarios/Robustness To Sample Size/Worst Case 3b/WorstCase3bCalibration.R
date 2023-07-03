@@ -1,3 +1,5 @@
+#Calibration for each sample size n5=1 up to 24 under Method 3(b)
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
