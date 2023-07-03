@@ -20,6 +20,6 @@ colQuantiles(Method3Delta$`Combined Cut-Offs`,probs=0.9,na.rm=T)  #Take 90% quan
 #Delta New = 0.90010
 #Delta Existing = 0.90010
 
-#Method 4 #Load Method 4(a) Data 
-#Delta New= 0.9001
-#Delta Existing = 0.8987
+Method 4 #Load Method 4(a) Data 
+Delta New= 0.9001
+Delta Existing = 0.8987
