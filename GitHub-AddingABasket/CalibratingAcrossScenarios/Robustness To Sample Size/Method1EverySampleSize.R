@@ -1,3 +1,5 @@
+#Simulation study for fixed scenarios for every sample size of the new basket n5=1 up to 24 (the size of the existing baskets). Type I error rate and power are found for each sample size.
+
 library(rjags)
 library(textmineR)
 library(matrixStats)
@@ -108,9 +110,8 @@ for(i in 1:10){
 }
 save(TryEveryn5,file='TryEveryn5ValueMethod1.RData')
 
-
+#Plots
 load('TryEveryn5ValueMethod1.RData')
-
 Sc1 <- matrix(NA,ncol=5,nrow=24)
 Sc2 <- matrix(NA,ncol=5,nrow=24)
 Sc3 <- matrix(NA,ncol=5,nrow=24)
